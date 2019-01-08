@@ -1,0 +1,106 @@
+/*!
+ * Material Design for Bootstrap 4
+ * Version: MDB FREE 4.6.1
+ *
+ *
+ * Copyright: Material Design for Bootstrap
+ * https://mdbootstrap.com/
+ *
+ * Read the license: https://mdbootstrap.com/general/license/
+ *
+ *
+ * Documentation: https://mdbootstrap.com/
+ *
+ * Getting started: https://mdbootstrap.com/docs/jquery/getting-started/download/
+ *
+ * Tutorials: https://mdbootstrap.com/education/bootstrap/
+ *
+ * Templates: https://mdbootstrap.com/templates/
+ *
+ * Support: https://mdbootstrap.com/support/
+ *
+ * Contact: office@mdbootstrap.com
+ *
+ * Attribution: Animate CSS, Twitter Bootstrap, Materialize CSS, Normalize CSS, Waves JS, WOW JS, Toastr, Chart.js , Hammer.js
+ *
+ */
+/*** Global ***/
+.view {
+    position: relative;
+    overflow: hidden;
+    cursor: default; }
+.view .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed; }
+.view img, .view video {
+    position: relative;
+    display: block; }
+.view video.video-intro {
+    z-index: -100;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transition: 1s opacity;
+    -o-transition: 1s opacity;
+    transition: 1s opacity;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto; }
+
+.overlay .mask {
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out; }
+.overlay .mask:hover {
+    opacity: 1; }
+
+.img-fluid, .modal-dialog.cascading-modal.modal-avatar .modal-header,
+.video-fluid {
+    max-width: 100%;
+    height: auto; }
+
+.flex-center {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%; }
+.flex-center p {
+    margin: 0; }
+.flex-center ul {
+    text-align: center; }
+.flex-center ul li {
+    margin-bottom: 1rem; }
+.flex-center ul li:last-of-type {
+    margin-bottom: 0; }
+
+.rgba-white-slight,
+.rgba-white-slight:after {
+    background-color: rgba(255, 255, 255, 0.1); }
+
+.rgba-white-light,
+.rgba-white-light:after {
+    background-color: rgba(255, 255, 255, 0.3); }
+
+.rgba-white-strong,
+.rgba-white-strong:after {
+    background-color: rgba(255, 255, 255, 0.7); }

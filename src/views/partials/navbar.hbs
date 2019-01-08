@@ -1,0 +1,41 @@
+<nav class="main-header navbar navbar-expand bg-white navbar-light border-bottom">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
+        </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto">
+        {{# if loggedIn }}
+            <li class="nav-item dropdown">
+                <a href="/user/settings" class="nav-link">
+                    <i class="material-icons" style="vertical-align: middle;">settings</i>
+                    <span class="d-none d-sm-inline-block">Settings</span>
+                </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="/user/account" class="nav-link">
+                    <i class="material-icons" style="vertical-align: middle;">account_circle</i>
+                    <span class="d-none d-sm-inline-block">Account</span>
+                </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="/access/logout" class="nav-link">
+                    <i class="material-icons" style="vertical-align: middle; margin-right: 10px;">exit_to_app</i>
+                    <span class="d-none d-sm-inline-block">Log out</span>
+                </a>
+            </li>
+        {{ else }}
+            <li class="nav-item dropdown">
+                <a href="/access/login" class="nav-link">Log in</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="/access/register" class="nav-link">
+                    <span class="d-none d-sm-inline-block">Register</span>
+                </a>
+            </li>
+        {{/if}}
+    </ul>
+
+</nav>
