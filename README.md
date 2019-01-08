@@ -5,7 +5,7 @@ The following installation steps are those needed for an installation on ubuntu 
 ### 1) Cloning the repository
 First, you will need to clone the repository :
 ```Bash
-git clone https://github.com/geverartsdev/MetaSong.git
+git clone https://github.com/edvgui/MetaSong.git
 ```
 ### 2) Installing the server
 Check if you have nodejs installed :
@@ -69,5 +69,7 @@ sudo chmod +x /path/to/your/script/metasong
 sudo /path/to/your/script/metasong start
 ```
 ## Contributing
+This project is developped without any garantee of further improvment of maintenance.  If you want to help your help is welcome, you can start by posting issues and pull requests. 
 
 ## License
+This project is under MIT license, feel free to use it at your own will.
