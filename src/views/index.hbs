@@ -67,15 +67,16 @@
         </div>
         {{# each results.data.data }}
             <div class="info-box col-12" >
-                <audio id="{{ this.id }}">
+                <audio id="{{ this.id }}-player">
                     <source src="{{ this.preview }}" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
                 <div class="info-box-icon">
                     <div class=" view overlay" onclick="play({{ this.id }});">
                         <img src="{{ this.album.cover_medium }}" class="img-fluid">
-                        <div class="mask flex-center rgba-white-strong">
-                            <i class="fa fa-play"></i>
+                        <div class="mask flex-center rgba-white-light">
+                            <i class="fa fa-play" id="{{ this.id }}-play"></i>
+                            <i class="fa fa-pause" id="{{ this.id }}-pause" style="display: none;"></i>
                         </div>
                     </div>
                 </div>
@@ -95,17 +96,25 @@
             function play(id) {
                 if (playing === id) {
                     if (pause) {
-                        document.getElementById(id).play();
+                        document.getElementById(id + "-player").play();
+                        document.getElementById(id + "-play").style.display = 'none';
+                        document.getElementById(id + "-pause").style.display = 'block';
                         pause = false;
                     }
                     else {
-                        document.getElementById(id).pause();
+                        document.getElementById(id + "-player").pause();
+                        document.getElementById(id + "-play").style.display = 'block';
+                        document.getElementById(id + "-pause").style.display = 'none';
                         pause = true;
                     }
                 }
                 else {
-                    if (playing) document.getElementById(playing).pause();
-                    document.getElementById(id).play();
+                    if (playing) document.getElementById(playing + "-player").pause();
+                    if (playing) document.getElementById(playing + "-play").style.display = 'block';
+                    if (playing) document.getElementById(playing + "-pause").style.display = 'none';
+                    document.getElementById(id + "-player").play();
+                    document.getElementById(id + "-play").style.display = 'none';
+                    document.getElementById(id + "-pause").style.display = 'block';
                     playing = id;
                     pause = false;
                 }
