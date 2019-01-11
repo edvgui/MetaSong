@@ -3,7 +3,6 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const expressValidator = require('express-validator');
 const expressSession = require('express-session');
-const constants = require('./constants');
 const multer = require('multer');
 
 const uploadSong = multer({
@@ -79,12 +78,14 @@ function requiresLogin(req, res, next) {
     if (req.session && req.session.userId) {
         res.locals.loggedIn = true;
         res.locals.urlRequested = req.session.urlRequested;
+        res.locals.user = true;
         res.locals.admin = req.session.admin;
         return next();
     } else {
         res.locals.loggedIn = false;
         res.locals.urlRequested = req.session.urlRequested;
         req.session.urlDeclined = req.session.urlRequested;
+        res.locals.user = false;
         res.locals.admin = false;
         return res.render('login_required', { title: 'Login required', layout: 'empty' });
     }

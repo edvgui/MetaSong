@@ -46,7 +46,6 @@ async function home(req, res) {
         data: req.session.data,
         errors: req.session.errors,
         success: req.session.success,
-        sidebarItems: constants.SIDEBAR //TODO trouver une autre solution pour ca
     });
 
     req.session.errors = undefined;

@@ -11,6 +11,7 @@ module.exports = {
             name: "Dashboard",
             url: "/app",
             admin: false,
+            user: true,
             icon: "fa fa-dashboard",
             /*subs: [
                 {
@@ -36,14 +37,16 @@ module.exports = {
         {
             name: "My songs",
             url: "#",
+            user: true,
             admin: false,
             icon: "fa fa-music"
         },
         {
             name: "Admin zone",
             url: "#",
+            user: true,
             admin: true,
-            icon: "fa fa-danger"
+            icon: "fa fa-bomb"
         }
     ]
 };

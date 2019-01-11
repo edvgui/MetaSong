@@ -4,6 +4,7 @@ const http = require('http');
 const database = require('./config/database');
 const middlewares = require('./config/middlewares');
 const constants = require('./config/constants');
+const helpers = require('./config/helpers');
 const routes = require('./modules');
 const hbs = require('express-handlebars').create({
     layoutsDir: path.join(__dirname, "views/layouts"),
@@ -12,12 +13,7 @@ const hbs = require('express-handlebars').create({
     extname: 'hbs',
     helpers: {
         appname: 'MetaSong',
-        ifVisible: function (admin, requireAdmin, options) {
-            return (admin || !requireAdmin) ? options.fn(this) : options.inverse(this);
-        },
-        ifActive: function (url, path, options) {
-            return (url && url.indexOf(path) !== -1) ? options.fn(this) : options.inverse(this);
-        }
+        generateSidebar: helpers.generateSidebar
     }
 });
 
