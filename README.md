@@ -73,6 +73,10 @@ Thanks to this script you can run the server as a service by simply typing :
 sudo chmod +x /path/to/your/script/metasong
 sudo /path/to/your/script/metasong start
 ```
+To start the app automatically after a reboot of the system, type the following :
+```Bash
+sudo update-rc.d metasong defaults
+```
 ## Contributing
 This project is developped without any garantee of further improvment of maintenance.  If you want to help your help is welcome, you can start by posting issues and pull requests. 
 

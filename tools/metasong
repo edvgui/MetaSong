@@ -9,9 +9,9 @@
 # Description:       Enable service provided by daemon.
 ### END INIT INFO
 
-dir="/opt/metasong"
+dir="/opt/MetaSong"
 cmd="node src/server.js"
-user="root"
+user="username"
 
 name=`basename $0`
 pid_file="/var/run/$name.pid"
