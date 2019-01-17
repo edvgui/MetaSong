@@ -7,7 +7,12 @@ First, you will need to clone the repository :
 ```Bash
 git clone https://github.com/edvgui/MetaSong.git
 ```
-### 2) Installing the server
+### 2) Installing the dependencies
+This project use a linux package to edit the metadata of the songs file, you will need to install it to run the app properly:
+```Bash
+sudo apt install ffmpeg
+```
+### 3) Installing the server
 Check if you have nodejs installed :
 ```Bash
 node --version
@@ -27,11 +32,11 @@ Once it's done, open a terminal in your project clone directory and type :
 npm i
 npm i --only=dev
 ```
-### 3) Installing mongodb
+### 4) Installing mongodb
 The server uses a mongodb database, to install it please checkout this site : [https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
 By default the server should be launched on the port 27017 of your machine, it needs to be this way for this server's current configuration.
 
-### 4) Launching the server
+### 5) Launching the server
 To launch the server simply type (still in the project directory):
 ```Bash
 npm run dev
@@ -44,7 +49,7 @@ This should work and display on the standard output the port on which the server
 ```Bash
 Server development HTTP listen on port 3000.
 ```
-### 5) Testing
+### 6) Testing
 To test if your installation is working, simply enter this url in your browser : [localhost:3000](http://localhost:3000)  (You might need to change 3000 by the port on which your server is listening to.)
 
 ## Usage
